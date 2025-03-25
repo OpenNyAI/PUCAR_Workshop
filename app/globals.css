@@ -76,6 +76,13 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  
+  /* PUCAR Theme Colors */
+  --pucar-teal: oklch(0.65 0.15 180); /* Teal color for primary actions like "Download" */
+  --pucar-teal-foreground: oklch(1 0 0);
+  --pucar-outline: oklch(1 0 0); /* White for outlined buttons like "Reschedule" */
+  --pucar-outline-foreground: oklch(0.65 0.15 180);
+  --pucar-outline-border: oklch(0.65 0.15 180);
 }
 
 .dark {
@@ -110,6 +117,13 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  
+  /* PUCAR Theme Colors - Dark Mode */
+  --pucar-teal: oklch(0.6 0.15 180); /* Slightly darker teal for dark mode */
+  --pucar-teal-foreground: oklch(1 0 0);
+  --pucar-outline: oklch(0.269 0 0);
+  --pucar-outline-foreground: oklch(0.6 0.15 180);
+  --pucar-outline-border: oklch(0.6 0.15 180);
 }
 
 @layer base {
@@ -119,4 +133,33 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* PUCAR Theme Button Styles */
+.btn-teal {
+  background-color: var(--pucar-teal);
+  color: var(--pucar-teal-foreground);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.btn-teal:hover {
+  opacity: 0.9;
+}
+
+.btn-outline {
+  background-color: var(--pucar-outline);
+  color: var(--pucar-outline-foreground);
+  border: 1px solid var(--pucar-outline-border);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.btn-outline:hover {
+  background-color: var(--pucar-outline-foreground);
+  color: var(--pucar-outline);
 }

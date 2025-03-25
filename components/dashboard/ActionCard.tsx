@@ -14,12 +14,12 @@ type ActionCardProps = {
 export const ActionCard = ({
   icon: Icon,
   label,
-  color = "text-green-600",
+  color = "text-[var(--pucar-teal)]",
   onClick,
 }: ActionCardProps): React.ReactElement => {
   return (
     <Card 
-      className="flex cursor-pointer flex-col items-center justify-center bg-green-50 p-6 text-center shadow-sm transition-all hover:bg-green-100 hover:shadow-md"
+      className="flex cursor-pointer flex-col items-center justify-center bg-[rgba(0,128,128,0.05)] p-6 text-center shadow-sm transition-all hover:bg-[rgba(0,128,128,0.1)] hover:shadow-md"
       onClick={onClick}
     >
       <div className="flex flex-col items-center">

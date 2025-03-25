@@ -302,31 +302,31 @@ export default function CasesPage(): React.ReactElement {
           {/* Tabs */}
           <div className="flex flex-wrap border-b mb-4">
             <button
-              className={`px-4 py-2 text-sm ${activeTab === "all" ? "border-b-2 border-blue-600 font-medium" : "text-gray-600"}`}
+              className={`px-4 py-2 text-sm ${activeTab === "all" ? "border-b-2 border-[var(--pucar-teal)] font-medium" : "text-gray-600"}`}
               onClick={() => setActiveTab("all")}
             >
               All (120)
             </button>
             <button
-              className={`px-4 py-2 text-sm ${activeTab === "time-bound" ? "border-b-2 border-blue-600 font-medium" : "text-gray-600"}`}
+              className={`px-4 py-2 text-sm ${activeTab === "time-bound" ? "border-b-2 border-[var(--pucar-teal)] font-medium" : "text-gray-600"}`}
               onClick={() => setActiveTab("time-bound")}
             >
               Time bound disposal orders (24)
             </button>
             <button
-              className={`px-4 py-2 text-sm ${activeTab === "6-months" ? "border-b-2 border-blue-600 font-medium" : "text-gray-600"}`}
+              className={`px-4 py-2 text-sm ${activeTab === "6-months" ? "border-b-2 border-[var(--pucar-teal)] font-medium" : "text-gray-600"}`}
               onClick={() => setActiveTab("6-months")}
             >
               &gt;6 months (8)
             </button>
             <button
-              className={`px-4 py-2 text-sm ${activeTab === "pending-judgement" ? "border-b-2 border-blue-600 font-medium" : "text-gray-600"}`}
+              className={`px-4 py-2 text-sm ${activeTab === "pending-judgement" ? "border-b-2 border-[var(--pucar-teal)] font-medium" : "text-gray-600"}`}
               onClick={() => setActiveTab("pending-judgement")}
             >
               Pending Judgement (32)
             </button>
             <button
-              className={`px-4 py-2 text-sm ${activeTab === "pending" ? "border-b-2 border-blue-600 font-medium" : "text-gray-600"}`}
+              className={`px-4 py-2 text-sm ${activeTab === "pending" ? "border-b-2 border-[var(--pucar-teal)] font-medium" : "text-gray-600"}`}
               onClick={() => setActiveTab("pending")}
             >
               Pending (120)
@@ -338,18 +338,18 @@ export default function CasesPage(): React.ReactElement {
             <div className="flex gap-2 mb-2 sm:mb-0">
               <Button
                 variant={showPendingTasks ? "default" : "outline"}
-                className={`h-10 px-4 py-2 text-sm ${showPendingTasks ? "bg-blue-600" : ""}`}
+                className={`h-10 px-4 py-2 text-sm ${showPendingTasks ? "bg-[var(--pucar-teal)] text-white border-[var(--pucar-teal)]" : "border-[var(--pucar-teal)] text-[var(--pucar-teal)]"}`}
                 onClick={togglePendingTasks}
               >
                 Pending tasks{" "}
                 <span
-                  className={`ml-1 ${showPendingTasks ? "bg-blue-500" : "bg-gray-200"} px-1.5 py-0.5 rounded text-xs`}
+                  className={`ml-1 ${showPendingTasks ? "bg-[rgba(255,255,255,0.2)]" : "bg-[rgba(0,128,128,0.1)]"} px-1.5 py-0.5 rounded text-xs`}
                 >
                   {pendingTasksCount}
                 </span>
               </Button>
               <Select value={selectedStage} onValueChange={handleStageChange}>
-                <SelectTrigger className="h-10 w-32">
+                <SelectTrigger className="h-10 w-32 border-[var(--pucar-teal)] text-[var(--pucar-teal)]">
                   <SelectValue placeholder="Stage" />
                 </SelectTrigger>
                 <SelectContent>
@@ -450,7 +450,7 @@ export default function CasesPage(): React.ReactElement {
                       <Button
                         variant="outline"
                         size="icon"
-                        className="h-8 w-8"
+                        className="h-8 w-8 border-gray-200 hover:border-[var(--pucar-teal)] hover:text-[var(--pucar-teal)]"
                         onClick={() => setCurrentPage(1)}
                         disabled={currentPage === 1}
                       >
@@ -459,7 +459,7 @@ export default function CasesPage(): React.ReactElement {
                       <Button
                         variant="outline"
                         size="icon"
-                        className="h-8 w-8"
+                        className="h-8 w-8 border-gray-200 hover:border-[var(--pucar-teal)] hover:text-[var(--pucar-teal)]"
                         onClick={() => setCurrentPage(currentPage - 1)}
                         disabled={currentPage === 1}
                       >
@@ -468,7 +468,7 @@ export default function CasesPage(): React.ReactElement {
                       <Button
                         variant="outline"
                         size="icon"
-                        className="h-8 w-8"
+                        className="h-8 w-8 border-gray-200 hover:border-[var(--pucar-teal)] hover:text-[var(--pucar-teal)]"
                         onClick={() => setCurrentPage(currentPage + 1)}
                         disabled={currentPage === totalPages}
                       >
@@ -477,7 +477,7 @@ export default function CasesPage(): React.ReactElement {
                       <Button
                         variant="outline"
                         size="icon"
-                        className="h-8 w-8"
+                        className="h-8 w-8 border-gray-200 hover:border-[var(--pucar-teal)] hover:text-[var(--pucar-teal)]"
                         onClick={() => setCurrentPage(totalPages)}
                         disabled={currentPage === totalPages}
                       >

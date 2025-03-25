@@ -38,7 +38,7 @@ export const TasksWidget = ({
   registeredCases,
 }: TasksWidgetProps): React.ReactElement => {
   return (
-    <Card className="mt-4 border border-blue-300">
+    <Card className="mt-4 border border-[var(--pucar-teal)] border-opacity-30">
       {/* Header */}
       <div className="p-3">
         <h2 className="text-xl font-semibold text-gray-800">Your Tasks</h2>
@@ -47,7 +47,7 @@ export const TasksWidget = ({
       {/* Filters */}
       <div className="flex gap-2 p-3">
         <Select defaultValue="case-stage">
-          <SelectTrigger className="h-10 w-full">
+          <SelectTrigger className="h-10 w-full border-gray-200 hover:border-[var(--pucar-teal)]">
             <SelectValue placeholder="Case Stage" />
           </SelectTrigger>
           <SelectContent>
@@ -58,7 +58,7 @@ export const TasksWidget = ({
           </SelectContent>
         </Select>
         <Select defaultValue="task-type">
-          <SelectTrigger className="h-10 w-full">
+          <SelectTrigger className="h-10 w-full border-gray-200 hover:border-[var(--pucar-teal)]">
             <SelectValue placeholder="Task Type" />
           </SelectTrigger>
           <SelectContent>

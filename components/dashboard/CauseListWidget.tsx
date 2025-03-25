@@ -144,7 +144,7 @@ export const CauseListWidget = ({
   const filteredSlots = Object.keys(filteredCases).map(Number);
 
   return (
-    <Card className="mt-8 border border-blue-300">
+    <Card className="mt-8 border border-[var(--pucar-teal)] border-opacity-30">
       {/* Header */}
       <div className="flex items-center justify-between p-4">
         <h2 className="text-xl font-semibold text-gray-800">
@@ -153,25 +153,25 @@ export const CauseListWidget = ({
         <div className="flex gap-2">
           <Button
             variant="outline"
-            className="bg-white text-blue-600 hover:bg-blue-50"
+            className="bg-white text-[var(--pucar-teal)] border-[var(--pucar-teal)] hover:bg-[rgba(0,128,128,0.05)] btn-outline"
           >
             Reschedule
           </Button>
-          <Button className="bg-green-600 text-white hover:bg-green-700">
+          <Button className="bg-[var(--pucar-teal)] text-white hover:bg-[var(--pucar-teal)] hover:opacity-90 btn-teal">
             Download
           </Button>
         </div>
       </div>
 
       {/* Date Navigation and Filters */}
-      <div className="border-t border-blue-300 p-4">
+      <div className="border-t border-[var(--pucar-teal)] border-opacity-30 p-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
           {/* Date Navigation */}
           <div className="flex items-center gap-2">
             <Button
               variant="outline"
               size="icon"
-              className="h-8 w-8"
+              className="h-8 w-8 border-gray-200 hover:border-[var(--pucar-teal)] hover:text-[var(--pucar-teal)]"
               onClick={goToPreviousDay}
             >
               <ChevronLeft className="h-4 w-4" />
@@ -180,7 +180,7 @@ export const CauseListWidget = ({
             <Button
               variant="outline"
               size="icon"
-              className="h-8 w-8"
+              className="h-8 w-8 border-gray-200 hover:border-[var(--pucar-teal)] hover:text-[var(--pucar-teal)]"
               onClick={goToNextDay}
             >
               <ChevronRight className="h-4 w-4" />
@@ -190,7 +190,7 @@ export const CauseListWidget = ({
           {/* Filters */}
           <div className="flex items-center gap-2">
             <Select value={statusFilter} onValueChange={setStatusFilter}>
-              <SelectTrigger className="h-8 w-32">
+              <SelectTrigger className="h-8 w-32 border-gray-200 hover:border-[var(--pucar-teal)]">
                 <SelectValue placeholder="Status" />
               </SelectTrigger>
               <SelectContent>
@@ -203,7 +203,7 @@ export const CauseListWidget = ({
             </Select>
 
             <Select value={purposeFilter} onValueChange={setPurposeFilter}>
-              <SelectTrigger className="h-8 w-32">
+              <SelectTrigger className="h-8 w-32 border-gray-200 hover:border-[var(--pucar-teal)]">
                 <SelectValue placeholder="Purpose" />
               </SelectTrigger>
               <SelectContent>
@@ -239,7 +239,7 @@ export const CauseListWidget = ({
       </div>
 
       {/* Last-minute requests */}
-      <div className="border-t border-blue-300 bg-amber-50 p-4">
+      <div className="border-t border-[var(--pucar-teal)] border-opacity-30 bg-amber-50 p-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2 font-medium text-amber-800">
             <div className="flex h-6 w-6 items-center justify-center rounded-full bg-amber-600 text-white">
