@@ -36,12 +36,10 @@ type Case = {
 
 export default function DashboardPage(): React.ReactElement {
   const router = useRouter();
-  // This would come from authentication in a real app
   const judge = {
     name: "Judge Koshy",
   };
 
-  // Current date
   const today = new Date();
   const formattedDate = today.toLocaleDateString("en-US", {
     day: "numeric",
