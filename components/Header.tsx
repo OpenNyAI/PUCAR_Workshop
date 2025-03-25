@@ -4,45 +4,31 @@ import React from "react";
 
 export const Header = (): React.ReactElement => {
   return (
-    <header className="w-full border-b border-gray-200 bg-white">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="/logo.png"
-            alt="PUCAR Logo"
-            width={40}
-            height={40}
-            className="h-10 w-auto"
-            priority
-          />
-          <span className="text-xl font-semibold">PUCAR Workshop</span>
-        </Link>
-        <nav className="hidden md:block">
-          <ul className="flex items-center gap-6">
-            <li>
-              <Link href="/" className="text-gray-700 hover:text-gray-900">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="text-gray-700 hover:text-gray-900">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="text-gray-700 hover:text-gray-900">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <div className="flex items-center gap-4">
-          <button className="rounded-md bg-gray-100 px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200">
-            Sign In
+    <header className="w-full bg-white">
+      <div className="flex h-14 items-center justify-between px-4">
+        <div className="flex items-center">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="PUCAR Logo"
+              width={30}
+              height={30}
+              className="h-8 w-auto"
+              priority
+            />
+          </Link>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <button className="flex h-8 items-center rounded-md  px-2 text-xs font-medium text-gray-700">
+            <span>EN</span>
           </button>
-          <button className="rounded-md bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-700">
-            Get Started
+          <button className="flex h-8 items-center rounded-md  px-2 text-xs font-medium text-gray-700">
+            <span>Support</span>
           </button>
+          <div className="ml-1 flex h-8 w-8 items-center justify-center rounded-full bg-purple-700 text-white">
+            <span className="text-xs font-medium">A</span>
+          </div>
         </div>
       </div>
     </header>
