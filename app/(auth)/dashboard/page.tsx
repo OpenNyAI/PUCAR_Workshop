@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { ArrowRight, LayoutDashboard } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { MetricCard } from "@/components/dashboard/MetricCard";
 import { ActionCard } from "@/components/dashboard/ActionCard";
 import { CalendarWidget } from "@/components/dashboard/CalendarWidget";
@@ -34,6 +35,7 @@ type Case = {
 };
 
 export default function DashboardPage(): React.ReactElement {
+  const router = useRouter();
   // This would come from authentication in a real app
   const judge = {
     name: "Judge Koshy",
@@ -230,8 +232,8 @@ export default function DashboardPage(): React.ReactElement {
             {/* View All Cases card */}
             <ActionCard
               icon={ArrowRight}
-              label="View\All Cases"
-              onClick={() => console.log("View all cases clicked")}
+              label="View All Cases"
+              onClick={() => router.push("/cases")}
             />
           </div>
 
